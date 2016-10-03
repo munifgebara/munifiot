@@ -60,7 +60,7 @@ public class FiltroEntityManager implements Filter {
             problem = t;
             t.printStackTrace();
         }
-        MunifPersistence.getInstance().destroyEntityManager();
+        //MunifPersistence.getInstance().destroyEntityManager();
         long tempo = System.currentTimeMillis() - inicio;
         System.out.println("-----> TEMPO " + tempo + "ms para " + hsr.getRequestURI());
         if (problem != null) {
@@ -94,7 +94,7 @@ public class FiltroEntityManager implements Filter {
      * Destroy method for this filter
      */
     public void destroy() {
-        //MunifPersistence.getInstance().destroy();
+        MunifPersistence.getInstance().destroy();
     }
 
     /**
